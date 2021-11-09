@@ -1,0 +1,329 @@
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/nunito-v16-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/nunito-v16-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/nunito-v16-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/nunito-v16-latin_cyrillic-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("../fonts/nunito-v16-latin_cyrillic-900.woff2") format("woff2"), url("../fonts/nunito-v16-latin_cyrillic-900.woff") format("woff");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 40px 0;
+  background-color: #8f0500;
+}
+
+.box {
+  max-width: 600px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #302F2F;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box__title {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.box__input {
+  margin: 0 0 10px;
+  padding: 10px 15px;
+  background-color: #1F1C1C;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+}
+
+.box__input::-webkit-input-placeholder {
+  color: #757575;
+  font-size: 16px;
+}
+
+.box__input:-ms-input-placeholder {
+  color: #757575;
+  font-size: 16px;
+}
+
+.box__input::-ms-input-placeholder {
+  color: #757575;
+  font-size: 16px;
+}
+
+.box__input::placeholder {
+  color: #757575;
+  font-size: 16px;
+}
+
+.box__input.error::-webkit-input-placeholder {
+  color: #F71818;
+}
+
+.box__input.error:-ms-input-placeholder {
+  color: #F71818;
+}
+
+.box__input.error::-ms-input-placeholder {
+  color: #F71818;
+}
+
+.box__input.error::placeholder {
+  color: #F71818;
+}
+
+.box__button-add {
+  color: #fff;
+  background-color: #8F0500;
+  border-radius: 15px;
+  border: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 5px 40px;
+  margin: 0 0 30px 0;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.box__button-add:hover {
+  background-color: #F71818;
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 10px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #1B1919;
+  cursor: pointer;
+}
+
+.label__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.label__checkbox:checked + .label__check-style::before {
+  opacity: 1;
+}
+
+.label__check-style {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #F71818;
+}
+
+.label__check-style::before {
+  content: '\2713';
+  color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+
+.label__text {
+  color: #fff;
+  padding: 0 0 0 25px;
+  position: relative;
+}
+
+.label__buttons {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__server-open {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__server-open:hover svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.label__server-open:hover svg:hover path {
+  fill: #F71818;
+}
+
+.label__server-open svg {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.label__server-open svg path {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.label__my-open {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__my-open:hover svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.label__my-open:hover svg:hover path {
+  fill: #F71818;
+}
+
+.label__my-open svg {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.label__my-open svg path {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.label__server-delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__server-delete:hover svg:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.label__server-delete:hover svg:hover path {
+  fill: #F71818;
+}
+
+.label__server-delete svg {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.label__server-delete svg path {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.label__my-delete {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__my-delete:hover svg:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.label__my-delete:hover svg:hover path {
+  fill: #F71818;
+}
+
+.label__my-delete svg {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.label__my-delete svg path {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
